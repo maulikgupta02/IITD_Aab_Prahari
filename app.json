@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "IITD aab prahari",
+    "slug": "IITD_aab_prahari",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon_temp.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash_icon_temp.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ADD8E6"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "ios": {
+      "supportsTablet": true,
+      "entitlements": {
+        "com.apple.developer.networking.wifi-info": true
+      },
+      "bundleIdentifier": "aab-prahari"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "package": "aap.prahari"
+    },
+    "permissions": [
+      "CAMERA",
+      "ACCESS_FINE_LOCATION",
+      "ACCESS_COARSE_LOCATION",
+      "READ_PHONE_STATE"
+    ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ]
+    ],
+    "extra": {
+      "apiUrl": "https://jalsuraksha.iitd.ac.in/barapullah/aab_prahari/updatecomplaint_user.php",
+      "eas": {
+        "projectId": "b056a997-a1f0-4673-a3ba-df7ef9c9e443"
+      }
+    }
+  }
+}
