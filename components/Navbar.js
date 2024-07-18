@@ -9,7 +9,7 @@ export default function Header() {
             resizeMode='cover'
         >
             <View style={styles.overlay}>
-                <Text style={styles.text}>Flood Reporting</Text>
+                <Text style={styles.text}>Let's Report Flooding</Text>
                 <Image
                     source={require("../assets/logo.png")}
                     style={styles.image}

@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Button, Pressable, Text, StyleSheet } from 'react-native';
 import * as FileSystem from 'expo-file-system';
 
-const SubmitButtonComponent = ({ imageData, locationData, depthData, networkData, onPress }) => {
+const SubmitButtonComponent = ({ imageData, locationData, depthData, onPress, user_id }) => {
   // Function to handle the submit button press
   const handleSubmit =  async () => {
 
@@ -17,8 +17,11 @@ const SubmitButtonComponent = ({ imageData, locationData, depthData, networkData
 
     const currentDate = new Date();
 
+    currentDate.setHours(currentDate.getHours() + 5); // Adding 5 hours for IST
+    currentDate.setMinutes(currentDate.getMinutes() + 30); // Adding additional 30 minutes for IST
+
     // Format the date as YYYY-MM-DD
-    const formattedDate = currentDate.toISOString().split('T')[0];
+    const formattedDate = currentDate.toISOString().slice(0, 19).replace('T', ' ');
 
     const generateRandomString = (length) => {
       let result = '';
@@ -50,7 +53,7 @@ const SubmitButtonComponent = ({ imageData, locationData, depthData, networkData
       formData.append('lac', 0);
       formData.append('mnc', 0);
       formData.append('mcc', 0);
-      formData.append("user_id", 'test_user')
+      formData.append("user_id", user_id)
 
       const formDataimg = new FormData();
       formDataimg.append('uploaded_file', {

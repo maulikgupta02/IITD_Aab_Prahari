@@ -32,7 +32,8 @@ export default function LocationComponent({onCapture}) {
 
       try {
         // console.log(reverseGeocode);
-        setAddress(reverseGeocode[0].name + ', ' + reverseGeocode[0].street + ', ' + reverseGeocode[0].district + ', ' + reverseGeocode[0].postalCode + ', ' + reverseGeocode[0].region + ', ' + reverseGeocode[0].city + ', ' + reverseGeocode[0].country);
+        setAddress(reverseGeocode[0].name +  ', ' + reverseGeocode[0].district + ', ' + reverseGeocode[0].postalCode + ', ' + reverseGeocode[0].region + ', ' + reverseGeocode[0].city + ', ' + reverseGeocode[0].country);
+        console.log(address)
       }
       catch{
         
@@ -57,7 +58,8 @@ export default function LocationComponent({onCapture}) {
 
     try {
       // console.log(reverseGeocode);
-      setAddress(reverseGeocode[0].name + ', ' + reverseGeocode[0].street + ', ' + reverseGeocode[0].district + ', ' + reverseGeocode[0].postalCode + ', ' + reverseGeocode[0].region + ', ' + reverseGeocode[0].city + ', ' + reverseGeocode[0].country);
+      setAddress(reverseGeocode[0].name + ', ' + reverseGeocode[0].district + ', ' + reverseGeocode[0].postalCode + ', ' + reverseGeocode[0].region + ', ' + reverseGeocode[0].city + ', ' + reverseGeocode[0].country);
+      console.log(address)
     }
     catch{
 

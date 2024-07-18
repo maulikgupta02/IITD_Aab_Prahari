@@ -7,7 +7,7 @@
     "icon": "./assets/icon_temp.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash_icon_temp.png",
+      "image": "./assets/icon_temp.png",
       "resizeMode": "contain",
       "backgroundColor": "#ADD8E6"
     },
@@ -62,6 +62,7 @@
       "eas": {
         "projectId": "b056a997-a1f0-4673-a3ba-df7ef9c9e443"
       }
-    }
+    
+}
   }
 }

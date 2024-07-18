@@ -17,8 +17,8 @@ export default function ImagePickerExample({onCapture}) {
   const takePhoto = async () => {
     let result = await ImagePicker.launchCameraAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsEditing: true,
-      aspect: [4, 3],
+      allowsEditing: false,
+      // aspect: [4, 3],
       quality: 1, 
     });
 
@@ -53,12 +53,12 @@ export default function ImagePickerExample({onCapture}) {
         {image ? (
           <Image source={{ uri: image }} style={styles.image} resizeMode="cover" />
         ) : (
-          <Image source={require('../assets/depth_reference.jpeg')} style={styles.image} resizeMode="cover" />
+          <Image source={require('../assets/depth_reference.png')} style={styles.image} resizeMode="cover" />
         )}
       </View>
       <View style={styles.buttons}>
       <View style={styles.buttonContainer}>
-        <Button title="Take Sample" onPress={takePhoto} />
+        <Button title="Take Photo" onPress={takePhoto} />
       </View>
       {image && (
       <View style={styles.clearButton}>
@@ -93,8 +93,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   image: {
-    width: '100%',
-    height: '100%',
+    width: '90%',
+    height: '90%',
+    backgroundColor: '#cee7ff'
   },
   clearButton: {
     flexDirection: 'row',
