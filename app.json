@@ -2,7 +2,7 @@
   "expo": {
     "name": "IITD aab prahari",
     "slug": "IITD_aab_prahari",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon_temp.png",
     "userInterfaceStyle": "light",
@@ -15,6 +15,7 @@
       "fallbackToCacheTimeout": 0
     },
     "ios": {
+      "buildNumber": "3",
       "supportsTablet": true,
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
@@ -24,7 +25,8 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "versionCode": 1
       },
       "permissions": [
         "android.permission.CAMERA",
@@ -37,8 +39,7 @@
     "permissions": [
       "CAMERA",
       "ACCESS_FINE_LOCATION",
-      "ACCESS_COARSE_LOCATION",
-      "READ_PHONE_STATE"
+      "ACCESS_COARSE_LOCATION"
     ],
     "web": {
       "favicon": "./assets/favicon.png"
@@ -47,13 +48,15 @@
       [
         "expo-camera",
         {
-          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+          "cameraPermission": "Camera permissions are required to take photographs of the flooded area while reporting."
         }
       ],
       [
         "expo-location",
         {
-          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+          "locationAlwaysAndWhenInUsePermission": "Enabling location services allows us to automatically obtain the location of the reported area.",
+          "locationAlwaysPermission": "Enabling location services allows us to automatically obtain the location of the reported area.",
+          "locationWhenInUsePermission": "Enabling location services allows us to automatically obtain the location of the reported area.",
         }
       ]
     ],

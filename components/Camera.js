@@ -58,7 +58,7 @@ export default function ImagePickerExample({onCapture}) {
       </View>
       <View style={styles.buttons}>
       <View style={styles.buttonContainer}>
-        <Button title="Take Photo" onPress={takePhoto} />
+        <Button title="Capture Image" onPress={takePhoto} />
       </View>
       {image && (
       <View style={styles.clearButton}>
@@ -90,17 +90,19 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 20,
+    borderRadius: 7,
+    marginBottom: 10,
   },
   image: {
     width: '90%',
     height: '90%',
-    backgroundColor: '#cee7ff'
+    borderRadius: 7
+    // backgroundColor: '#cee7ff'
   },
   clearButton: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginBottom: 20,
+    marginBottom: 10,
     paddingHorizontal: 20,
     color: 'red'
   },

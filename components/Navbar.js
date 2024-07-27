@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, ImageBackground, Image } from 'react-native';
 export default function Header() {
     return (
         <ImageBackground
-            source={require("../assets/floods.jpeg")} 
+            source={require("../assets/actionbar_logo-Photoroom.png")} 
             style={styles.container}
             resizeMode='cover'
         >

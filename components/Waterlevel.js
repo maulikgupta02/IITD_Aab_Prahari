@@ -4,7 +4,7 @@ import { ScrollView, TouchableOpacity, View, Text, StyleSheet } from 'react-nati
 const RadioButtonGroup = ({ onCapture }) => {
   const [selectedOption, setSelectedOption] = useState(null);
 
-  const options = ['Ankle', 'Knee', 'Thigh', 'Waist', 'Above Head'];
+  const options = ['Ankle', 'Knee', 'Thigh', 'Waist', '>Head'];
 
   const RadioButton = ({ label, selected, onPress }) => {
     return (

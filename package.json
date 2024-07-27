@@ -1,6 +1,6 @@
 {
   "name": "iitd_aab_prahari",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -10,23 +10,28 @@
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.2.1",
-    "@react-native-community/netinfo": "^11.3.2",
+    "@react-native-async-storage/async-storage": "1.23.1",
+    "@react-native-community/netinfo": "^11.3.1",
     "axios": "^1.7.2",
-    "expo": "~51.0.18",
-    "expo-camera": "~15.0.13",
+    "expo": "~51.0.21",
+    "expo-camera": "~15.0.14",
     "expo-cellular": "~6.0.3",
     "expo-file-system": "~17.0.1",
     "expo-image-manipulator": "~12.0.5",
     "expo-image-picker": "~15.0.7",
     "expo-location": "~17.0.1",
-    "expo-notifications": "~0.28.9",
+    "expo-notifications": "^0.28.10",
     "expo-status-bar": "~1.12.1",
+    "expo-updates": "~0.25.20",
     "formik": "^2.4.6",
+    "i18n-js": "^4.4.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.3",
-    "react-native-web": "~0.19.10",
-    "@react-native-async-storage/async-storage": "1.23.1"
+    "react-native-localize": "^3.2.0",
+    "react-native-modal": "^13.0.1",
+    "react-native-vector-icons": "^10.1.0",
+    "react-native-web": "~0.19.10"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

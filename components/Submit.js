@@ -40,6 +40,7 @@ const SubmitButtonComponent = ({ imageData, locationData, depthData, onPress, us
 
     const formData= new FormData();
     // console.log(locationData)
+    try{
       formData.append('location', locationData[1]);
       formData.append('latlon', (locationData[0].coords.latitude.toString()+','+locationData[0].coords.longitude.toString()).toString());
       formData.append('depth', depthData);
@@ -53,14 +54,21 @@ const SubmitButtonComponent = ({ imageData, locationData, depthData, onPress, us
       formData.append('lac', 0);
       formData.append('mnc', 0);
       formData.append('mcc', 0);
-      formData.append("user_id", user_id)
+      formData.append("user_id", user_id)}
+      catch{
+        console.log("error preparing formdata")
+      }
 
       const formDataimg = new FormData();
+      try{
       formDataimg.append('uploaded_file', {
         uri: imageData,
-        type: 'image/jpeg', // Correct MIME type for JPEG images
-        name: imgfilename    // Adjusted filename to match the MIME type
-      });
+        type: 'image/jpeg', 
+        name: imgfilename   
+      })}
+      catch (error) {
+        console.log(error)
+      };
 
     // Call the onPress callback to send data to the API
     onPress([formData,formDataimg]);
