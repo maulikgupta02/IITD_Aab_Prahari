@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "IITD aab prahari",
+    "slug": "IITD_aab_prahari",
+    "version": "1.0.6",
+    "orientation": "portrait",
+    "icon": "./assets/icon_temp.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/icon_temp.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ADD8E6"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "ios": {
+      "buildNumber": "1",
+      "supportsTablet": true,
+      "entitlements": {
+        "com.apple.developer.networking.wifi-info": true
+      },
+      "bundleIdentifier": "aab-prahari"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "aap.prahari"
+    },
+    "permissions": [
+      "CAMERA",
+      "ACCESS_FINE_LOCATION",
+      "ACCESS_COARSE_LOCATION"
+      ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Camera permissions are required to take photographs of the flooded area while reporting."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Enabling location services allows us to automatically obtain the location of the reported area.",
+          "locationAlwaysPermission": "Enabling location services allows us to automatically obtain the location of the reported area.",
+          "locationWhenInUsePermission": "Enabling location services allows us to automatically obtain the location of the reported area."
+        }
+      ],
+      "expo-build-properties"
+    ],
+    "extra": {
+      "apiUrl": "https://jalsuraksha.iitd.ac.in/barapullah/aab_prahari/updatecomplaint_user.php",
+      "eas": {
+        "projectId": "b056a997-a1f0-4673-a3ba-df7ef9c9e443"
+      }
+    }
+  }
+}
